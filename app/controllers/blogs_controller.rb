@@ -50,6 +50,10 @@ class BlogsController < ApplicationController
   def contact
   end
   
+  def contact_create
+    redirect_to blogs_path, notice:"お問い合わせを送信しました。"
+  end
+  
   private
   
   def blog_params
