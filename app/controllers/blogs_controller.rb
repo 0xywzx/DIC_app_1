@@ -47,6 +47,9 @@ class BlogsController < ApplicationController
   def show
   end
   
+  def contact
+  end
+  
   private
   
   def blog_params
