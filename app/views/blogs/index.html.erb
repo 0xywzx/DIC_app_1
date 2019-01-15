@@ -1,23 +1,57 @@
-<h1>ブログ一覧</h1>
-
-<p><%= notice %></p>
-
-<table>
-  <tr>
-    <th>タイトル</th>
-    <th>内容</th>
-  </tr>
-
-<% @blogs.each do |blog| %>
-  <tr>
-    <td><%= blog.title %></td>
-    <td><%= blog.content %></td>
-    <td><%= link_to '詳細を確認する', blog_path(blog.id) %></td>
-    <td><%= link_to "ブログを編集する", edit_blog_path(blog.id) %></td>
-    <td><%= link_to 'ブログを削除する', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>  
-    </tr>
-<% end %>
-</table>
-
-<div><%= link_to 'ブログ作成画面へ', '/blogs/new' %></div>
-<div><%= link_to 'お問い合わせ', '/contacts/new' %></div>
+<div class="container">
+  <div class="row_A">
+    <div class="col-sm-12 col-md-12">
+      <div class="index_header">
+        <li class="index_header_main">評価一覧</li>
+        <li class="button_to_new">
+          <%= link_to '投稿する', '/blogs/new' ,class: "fa fa-caret-right" %>
+        </li>
+      </div>
+    </div>
+  </div>
+  <p><%= notice %></p>
+  <div class="row_B">
+    <div class="col-sm-12 col-md-3"
+      <div class="lecture_bar">
+        <p>---</p>
+        <p>---</p>
+        <p>---</p>
+        <p>---</p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-9">
+      <% @blogs.each do |blog| %>
+        <div class="row_B_A">
+          <div class="col-sm-2 col-md-2">
+            <div class="content_left_side">
+              <p><%= blog.name %></p>
+              <p><%= blog.lecture_name %></p>
+              <p><%= blog.difficulty %></p>
+            </div>
+          </div>
+          <div class="col-sm-10 col-md-10">
+            <div class="content_right_side">
+              <p><%= blog.content %></p>
+              <div class="content_right_side_button">
+                <p><%= link_to '削除', blog_path(blog.id),class: 'btn btn-danger', method: :delete ,data: { confirm: '本当に削除していいですか？' ,class: 'btn btn-danger'} %></p>
+                <p><%= link_to "編集する", edit_blog_path(blog.id), class: 'btn btn-info' %></p>
+                <p><%= link_to '詳細を確認', blog_path(blog.id), class: 'btn btn-default' %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="row_C">
+    <div class="col-sm-12 col-md-12">
+      <div><%= link_to 'お問い合わせ', '/contacts/new' %></div>
+    </div>
+  </div>
+  <div class="row_D">
+    <div class="col-sm-12 col-md-12">
+      <p>-</p>
+      <p>-</p>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,7 @@
-<h1>ブログ詳細画面</h1>
-<p>タイトル: <%= @blog.title %></p>
+<h1>詳細画面</h1>
+<p>投稿者: <%= @blog.name %></p>
+<p>授業名: <%= @blog.lecture_name %></p>
+<p>難易度: <%= @blog.difficulty %></p>
 <p>内容: <%= @blog.content %></p>
+
+<%= link_to "ブログ一覧画面にもどる", blogs_path %>

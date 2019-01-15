@@ -3,12 +3,37 @@
   <head>
     <title>Sample</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+            <span class="sr-only">Rate the Lecture</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/tops/index">Rate the Lecture</a>
+        </div>
+        <div id="gnavi" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/blogs/index">新着</a></li>
+            <li><a href="">検索</a></li>
+            <li><a href="" class="button_to_login">ログイン</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <footer>
+          <p>運営会社 OO 株式会社</p>
+          <p>© 2018-2019 Copyright OO Inc.</p>
+  </footer>
 </html>

@@ -1,0 +1,145 @@
+.navbar-default{
+  background-color: #ADFF2F;
+}
+
+.navbar-nav{
+  float: right;
+  background-position: center;
+}
+
+.main-header {
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+  background-image: url("header.jpg");
+  background-attachment: fixed;
+}
+
+.main-header img {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+  padding-top: 15%;
+}
+
+
+.button_to_login{
+  height: 15px;
+  padding: 7px 20px;
+	border-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-position: center center;
+  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+}
+
+.button_to_login:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.about {
+  background-color: white;
+  color: #333;
+  padding: 80px;
+}
+
+.function {
+  background-color: #e9e9e9;
+  padding: 80px;
+  padding-bottom: 185px;
+}
+
+.function-images {
+  width: 100%;
+  display: table;
+  margin-top: 60px;
+  table-layout: fixed;
+}
+
+.function-image {
+  display: table-cell;
+  width: 100%;
+}
+
+.index_header li{
+  margin: 10px;
+  list-style-type: none;
+  display: inline;
+}
+
+.index_header_main {
+  font-size: 30px;
+}
+
+.button_to_new{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-bottom: solid 3px #668ad8;
+    border-left: solid 3px #668ad8;
+    color: #668ad8;
+    transition: .4s;
+    }
+
+.button_to_new:hover {
+    padding-left: 0.7em;
+    padding-right: 0.3em;
+}
+
+.row_B_A {
+
+}
+
+.content_left_side {
+  height: 220px;
+  border: solid 1px #808080;
+  text-align: left;
+  padding: 5px;
+  margin: 0px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.content_right_side {
+  height: 220px;
+  border: solid 1px #808080;
+  text-align: left;
+  padding: 5px;
+  margin-left: -15px;
+}
+
+.content_right_side_button{
+  position: absolute;
+  right: 15px;
+	bottom: 0;
+}
+.content_right_side_button p {
+  float: right;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
+footer {
+  width: 100%;
+  background-color:#2c3e50;
+  padding: 15px 0 5px 0;
+  color: white;
+  margin: auto;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+}

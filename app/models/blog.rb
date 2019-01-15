@@ -1,4 +1,6 @@
 class Blog < ApplicationRecord
-  validates :title, presence: true
-  validates :content, length: { in: 1..140 }
+  validates :name, length: { in: 1..30 }
+  validates :lecture_name, length: { in: 1..30 }
+  validates :difficulty, length: { in: 1..10 }
+  validates :content, length: { in: 1..500 }
 end
