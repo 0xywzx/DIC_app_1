@@ -22,9 +22,22 @@
   padding-top: 15%;
 }
 
+.navbar-nav li a{
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.button_to_main{
+  margin-top: 5px;
+}
+
+.search_bar{
+  margin-top: 5px;
+}
 
 .button_to_login{
-  height: 15px;
+  display: inline-block;
+  margin-top: 5px;
   padding: 7px 20px;
 	border-radius: 25px;
   text-decoration: none;
