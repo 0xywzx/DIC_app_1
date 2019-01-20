@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'tops#index'
   get '/blogs/contact', to: 'blogs#contact'
   get '/blogs/index', to: 'blogs#index'
@@ -15,6 +17,16 @@ Rails.application.routes.draw do
   end
 
   resources :tops do
+    collection do
+    end
+  end
+
+  resources :users do
+    collection do
+    end
+  end
+
+  resources :sessions do
     collection do
     end
   end
