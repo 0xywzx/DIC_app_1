@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+.lecture_bar{
+  text-align: left;
+}
+
+.lecture_bar_header{
+  background: green;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  margin: 0;
+  border: 1px solid #fff;
+}
+
+.treemenu1 {
+  width: auto;
+  margin: 0 auto;
+}
+.treemenu1 .tm-content {
+  margin: 0 10px;
+}
+.treemenu1 input {
+  display: none;
+  text-align: left;
+}
+.treemenu1 label {
+  cursor: pointer;
+  padding: 10px;
+}
+.treemenu1 label:hover {
+  color: #ccc;
+}
+.treemenu1 .tm1-cont {
+  transition: 0.2s;
+  height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+}
+.treemenu1 input:checked + .tm1-cont {
+  height: auto;
+  padding: 10px;
+}
+
+.content_left_side {
+  height: 220px;
+  border: solid 1px #808080;
+  text-align: left;
+  padding: 5px;
+  margin: 0px;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.content_right_side {
+  height: 220px;
+  border: solid 1px #808080;
+  text-align: left;
+  padding: 5px;
+  margin-left: -15px;
+}
+
+.content_right_side_button{
+  position: absolute;
+  right: 15px;
+	bottom: 0;
+}
+.content_right_side_button p {
+  float: right;
+  margin-right: 8px;
+  margin-left: 8px;
+}
