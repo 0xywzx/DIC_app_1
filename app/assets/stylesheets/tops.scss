@@ -1,3 +1,11 @@
+.container_fluid{
+  margin-bottom: 200px;
+}
+
+.top-header{
+
+}
+
 .navbar-default{
   background-color: #ADFF2F;
 }
@@ -8,10 +16,11 @@
 }
 
 .main-header {
+  height: 500px;
   padding-bottom: 15%;
   width: 100%;
   background-size: cover;
-  background-image: url("app/assets/images/back_image.jpg");
+  background-image: url("back_image.jpg");
   background-attachment: fixed;
 }
 
@@ -22,13 +31,13 @@
   padding-top: 15%;
 }
 
-.navbar-nav li a{
-  padding-top: 8px;
-  padding-bottom: 8px;
+.navbar-nav li {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .button_to_main{
-  margin-top: 5px;
+
 }
 
 .search_bar{
@@ -37,9 +46,7 @@
 
 .button_to_login{
   display: inline-block;
-  margin-top: 5px;
-  padding: 7px 20px;
-	border-radius: 25px;
+	border-radius: 10px;
   text-decoration: none;
   color: #FFF;
   background-position: center center;
@@ -53,8 +60,46 @@
     background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
 
+.button_to_profile{
+  display: inline-block;
+  margin-top: 5px;
+  padding: 7px 20px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-position: center center;
+  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+}
+
+.button_to_profile:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
+.button_to_logout{
+  display: inline-block;
+  margin-top: 5px;
+  padding: 7px 20px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  text-decoration: none;
+  color: #FFF;
+  background-position: center center;
+  background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  background-image: linear-gradient(45deg, #FFC107 0%, #ff8b5f 100%);
+  transition: .4s;
+}
+
+.button_to_logout:hover {
+    background-image: -webkit-linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+    background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
+}
+
 .about {
-  background-color: white;
+  background-color: transparent;
   color: #333;
   padding: 80px;
 }

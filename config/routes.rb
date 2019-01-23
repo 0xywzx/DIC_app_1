@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  get 'sessions/new', to: 'sessions#new'
 
   root 'tops#index'
   get '/blogs/contact', to: 'blogs#contact'

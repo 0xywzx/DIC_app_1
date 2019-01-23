@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
    before_action :set_blog, only: [:show, :edit, :update, :destroy]
+   before_action :user_only, only: [:new, :edit, :update, :destroy]
 
   def index
     @blogs = Blog.all
@@ -55,4 +56,11 @@ class BlogsController < ApplicationController
   def set_blog
     @blog = Blog.find(params[:id])
   end
+
+  def user_only
+    if logged_in?
+    else
+      redirect_to "/sessions/new"
+    end
+  end    
 end
