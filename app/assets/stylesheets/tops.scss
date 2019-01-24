@@ -3,11 +3,21 @@
 }
 
 .top-header{
+  width: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  background-color: #ADFF2F;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.navbar-header{
 
 }
 
 .navbar-default{
-  background-color: #ADFF2F;
+
 }
 
 .navbar-nav{
