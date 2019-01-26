@@ -80,19 +80,27 @@
         <div class="row_B_A">
           <div class="col-sm-2 col-md-2">
             <div class="content_left_side">
-              <p><%= blog.name %></p>
               <p><%= blog.lecture_name %></p>
+              <p><%= blog.name %></p>
               <p><%= blog.difficulty %></p>
+              <p><%= blog.user.name %></p>
             </div>
           </div>
           <div class="col-sm-10 col-md-10">
             <div class="content_right_side">
               <p><%= blog.content %></p>
-              <div class="content_right_side_button">
-                <p><%= link_to '削除', blog_path(blog.id),class: 'btn btn-danger', method: :delete ,data: { confirm: '本当に削除していいですか？' ,class: 'btn btn-danger'} %></p>
-                <p><%= link_to "編集する", edit_blog_path(blog.id), class: 'btn btn-info' %></p>
-                <p><%= link_to '詳細を確認', blog_path(blog.id), class: 'btn btn-default' %></p>
-              </div>
+              <% if logged_in? %>
+                <% if current_user.id == blog.user_id %>
+                  <div class="content_right_side_button">
+                    <p><%= link_to '詳細を確認', blog_path(blog.id), class: 'btn btn-default' %></p>
+                    <p><%= link_to "編集する", edit_blog_path(blog.id), class: 'btn btn-info' %></p>
+                    <p><%= link_to '削除', blog_path(blog.id),class: 'btn btn-danger', method: :delete ,data: { confirm: '本当に削除していいですか？' ,class: 'btn btn-danger'} %></p>
+                  </div>
+                <% end %>
+                <div class="content_right_side_button">
+                  <p><%= link_to '詳細を確認', blog_path(blog.id), class: 'btn btn-default' %></p>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -106,7 +114,7 @@
   </div>
   <div class="row_D">
     <div class="col-sm-12 col-md-12">
-      
+
     </div>
   </div>
 </div>

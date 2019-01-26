@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
+
+  get 'favorites/destroy'
+
   get 'sessions/new', to: 'sessions#new'
 
   root 'tops#index'
@@ -31,4 +35,6 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :favorites, only: [:create, :destroy]
+  
 end
