@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 
-  def confirm
+  def show
   end
 
   def create
