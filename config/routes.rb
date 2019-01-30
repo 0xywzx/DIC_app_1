@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   get 'favorites/create'
-
   get 'favorites/destroy'
-
   get 'sessions/new', to: 'sessions#new'
-
   root 'tops#index'
   get '/blogs/contact', to: 'blogs#contact'
   get '/blogs/index', to: 'blogs#index'
@@ -36,5 +33,7 @@ Rails.application.routes.draw do
   end
 
   resources :favorites, only: [:create, :destroy]
-  
+
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
 end
