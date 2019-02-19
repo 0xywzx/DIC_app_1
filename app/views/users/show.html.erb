@@ -1,12 +1,31 @@
-<h1><%= @user.name %>のページ</h1>
-
-<p>メールアドレス: <%= @user.email %></p>
-
-<p>お気に入り一覧</p>
-
-<% @favorites_blogs.each do |favorite_blog| %>
-  <p><%= favorite_blog.lecture_name %><p>
-  <p><%= favorite_blog.name %><p>
-  <p><%= favorite_blog.difficulty %><p>
-  <p><%= favorite_blog.content %><p>    
-<% end %>
+<html>
+  <body>
+    <div class="container">
+      <div class="row_I">
+        <div class="col-sm-12 col-md-12">
+          <div>
+            <h1><%= @user.name %>のページ</h1>
+            <p>メールアドレス: <%= @user.email %></p>
+            <p>お気に入り一覧</p>
+          </div>
+        </div>
+      </div>
+      <div class="row_J">
+        <% @favorites_blogs.each do |favorite_blog| %>
+        <div class="col-sm-3 col-md-3">
+          <div class="favoritelist_left">
+            <p>講義名：<%= favorite_blog.lecture_name %><p>
+            <p>教授名：<%= favorite_blog.name %><p>
+            <p>難易度：<%= favorite_blog.difficulty %><p>
+          </div>
+        </div>
+        <div class="col-sm-9 col-md-9">
+          <div class="favoritelist_right">
+            <p><%= favorite_blog.content %><p>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </body>
+</html>
