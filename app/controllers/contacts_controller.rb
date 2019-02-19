@@ -9,14 +9,15 @@ class ContactsController < ApplicationController
     @contact = Contact.new
   end
 
-  def show
+  def confirm
+    @contact = Contact.new(contact_params)
   end
 
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
-      redirect_to contacts_path, notice: 'Contact was successfully created.'
+      redirect_to blogs_path, notice: 'Contact was successfully created.'
     else
       render :new
     end

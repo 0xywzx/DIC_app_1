@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/blogs/contact', to: 'blogs#contact'
   get '/blogs/index', to: 'blogs#index'
   get '/tops/index', to: 'tops#index'
+
   resources :blogs do
     collection do
       post :confirm
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :contacts do
     collection do
+      post :confirm
     end
   end
 
